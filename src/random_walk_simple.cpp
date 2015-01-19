@@ -100,7 +100,7 @@ void Robot::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
     //ROS_INFO("Smallest range is %lf", *range_it);
 
     if(*range_it < min_range_) obstacle_ = true;
-    else obstacle_ = true;
+    else obstacle_ = false;
 }
 
 void Robot::odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
